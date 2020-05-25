@@ -5,7 +5,7 @@ const ProfileSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: 'user'
   },
-  companny: {
+  company: {
     type: String
   },
   location: {
@@ -34,7 +34,7 @@ const ProfileSchema = new mongoose.Schema({
         type: String,
         required: true
       },
-      companny: {
+      company: {
         type: String,
         required: true
       },
