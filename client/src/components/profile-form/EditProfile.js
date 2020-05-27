@@ -55,8 +55,6 @@ const EditProfile = ({
     skills,
     bio,
     githubusername,
-    experience,
-    education,
     youtube,
     twitter,
     facebook,
