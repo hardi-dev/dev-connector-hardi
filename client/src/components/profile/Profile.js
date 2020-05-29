@@ -6,6 +6,8 @@ import Spinner from './../layout/Spinner';
 import { getProfileById } from '../../actions/profile';
 import ProfileTop from './ProfileTop';
 import ProfileAbout from './ProfileAbout';
+import ProfileExperience from './ProfileExperience';
+import ProfileEducation from './ProfileExperience';
 
 const Profile = ({
   getProfileById,
@@ -37,6 +39,36 @@ const Profile = ({
           <div className='profile-grid my-1'>
             <ProfileTop profile={profile} />
             <ProfileAbout profile={profile} />
+            <div className='profile-exp bg-white p-2'>
+              <h2 className='text-primary'>Experience</h2>
+              {profile.experience.length > 0 ? (
+                <Fragment>
+                  {profile.experience.map((experience) => (
+                    <ProfileExperience
+                      experience={experience}
+                      key={experience._id}
+                    />
+                  ))}
+                </Fragment>
+              ) : (
+                <h4>No Experience Credentials</h4>
+              )}
+            </div>
+            <div className='profile-edu bg-white p-2'>
+              <h2 className='text-primary'>Education</h2>
+              {profile.education.length > 0 ? (
+                <Fragment>
+                  {profile.education.map((education) => (
+                    <ProfileEducation
+                      experience={education}
+                      key={education._id}
+                    />
+                  ))}
+                </Fragment>
+              ) : (
+                <h4>No Education Credentials</h4>
+              )}
+            </div>
           </div>
         </Fragment>
       )}
