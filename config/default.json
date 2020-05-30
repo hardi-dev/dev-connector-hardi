@@ -1,6 +1,0 @@
-{
-  "mongoURI": "mongodb://127.0.0.1:27017/mern-sosmed",
-  "jwtSecret": "mysecrettoken",
-  "githubClientID": "d61540bbdd019acdabfa",
-  "gihubSecret": "1c6d5b07f128cc0033c2760aaceb58648409eb2a"
-}
